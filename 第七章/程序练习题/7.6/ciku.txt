@@ -1,0 +1,8 @@
+﻿school,学校,校园
+love,爱
+school,学校,校园,家
+school,学校,校园,家,大工
+math,数学
+english,英语
+math,数学,算数
+material,材料

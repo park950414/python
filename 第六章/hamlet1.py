@@ -1,0 +1,22 @@
+def getText():
+    txt=open("Hamlet.txt","r").read()
+    txt=txt.lower()
+    for ch in '!"#$%@^&*()_+-=[]\\-=|/?,.~':
+        txt=txt.replace(ch," ")
+    return txt
+
+excludes={"the","and","of","you","a","i","my","in"}
+
+hamletTxt=getText()
+words=hamletTxt.split()
+counts={}
+for word in words:
+    counts[word]=counts.get(word,0)+1
+for word in excludes:
+    del counts[word]
+    
+items=list(counts.items())
+items.sort(key=lambda x:x[1],reverse=1)
+for i in range(10):
+    word,count=items[i]
+    print("{:<10}{:>5}".format(word,count))
